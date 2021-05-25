@@ -2364,7 +2364,7 @@ var localStorageKey = "accountStatus";
 var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss, mb = _a.mb;
     var title = walletConfig.title, Icon = walletConfig.icon;
-    return (React__default['default'].createElement(Button, { fullWidth: true, variant: "tertiary", onClick: function () {
+    return (React__default['default'].createElement(Button, { fullWidth: true, onClick: function () {
             login(walletConfig.connectorId);
             window.localStorage.setItem(localStorageKey, "1");
             onDismiss();
@@ -2784,7 +2784,7 @@ var dark$3 = {
 };
 
 var light$4 = {
-    handleBackground: lightColors.card,
+    handleBackground: lightColors.textDisabled,
 };
 var dark$4 = {
     handleBackground: darkColors.card,

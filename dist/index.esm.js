@@ -1408,7 +1408,7 @@ var sortDataInOrder = function (data, columns) {
 };
 var makeRender = function (
 // eslint-disable-next-line
-value,
+value, 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 render, row) {
     return render ? function () { return render({ row: row, value: value }); } : function () { return value; };
@@ -2051,7 +2051,16 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
-        href: "https://t.me/VikingSwapOfficial",
+        items: [
+            {
+                label: "English",
+                href: "https://t.me/VikingSwapOfficial",
+            },
+            {
+                label: "Announcements",
+                href: "https://t.me/vikingswapannouncements",
+            },
+        ],
     },
     {
         label: "Twitter",
@@ -2342,7 +2351,7 @@ var localStorageKey = "accountStatus";
 var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss, mb = _a.mb;
     var title = walletConfig.title, Icon = walletConfig.icon;
-    return (React.createElement(Button, { fullWidth: true, variant: "tertiary", onClick: function () {
+    return (React.createElement(Button, { fullWidth: true, onClick: function () {
             login(walletConfig.connectorId);
             window.localStorage.setItem(localStorageKey, "1");
             onDismiss();
@@ -2640,7 +2649,7 @@ var brandColors = {
 var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { background: "#FAF9FA", backgroundDisabled: "#E9EAEB", contrast: "#191326", invertedContrast: "#FFFFFF", input: "#eeeaf4", tertiary: "#ff48c7", text: '#FFFFFF', textDisabled: '#915fa0', textSubtle: '#d5dae2', borderColor: "#E9EAEB", card: "#141520", gradients: {
         bubblegum: "linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)",
     } });
-var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#be7434", background: "#343135", backgroundDisabled: "#3c3742", contrast: "#FFFFFF", invertedContrast: "#191326", input: "#483f5a",
+var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#be7434", background: "#343135", backgroundDisabled: "#3c3742", contrast: "#FFFFFF", invertedContrast: "#191326", input: "#483f5a", 
     // primaryDark: "#0098A1",
     tertiary: "#353547", text: "#EAE2FC", textDisabled: "#666171", textSubtle: "#c9c4d4", borderColor: "#524B63", card: "#27262c", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
@@ -2762,7 +2771,7 @@ var dark$3 = {
 };
 
 var light$4 = {
-    handleBackground: lightColors.card,
+    handleBackground: lightColors.textDisabled,
 };
 var dark$4 = {
     handleBackground: darkColors.card,
