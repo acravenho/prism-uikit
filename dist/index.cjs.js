@@ -2061,16 +2061,6 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
-        items: [
-            {
-                label: "English",
-                href: "https://t.me/VikingSwapOfficial",
-            },
-            {
-                label: "Announcements",
-                href: "https://t.me/vikingswapannouncements",
-            },
-        ],
     },
     {
         label: "Twitter",
@@ -2207,8 +2197,12 @@ var PanelFooter = function (_a) {
                 var Icon = Icons$1[social.icon];
                 var iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
                 var mr = index < socials.length - 1 ? "24px" : 0;
+                //@ts-ignore
                 if (social.items) {
-                    return (React__default['default'].createElement(Dropdown, { key: social.label, position: "top", target: React__default['default'].createElement(Icon, __assign({}, iconProps, { mr: mr })) }, social.items.map(function (item) { return (React__default['default'].createElement(Link, { external: true, key: item.label, href: item.href, "aria-label": item.label, color: "textSubtle" }, item.label)); })));
+                    return (React__default['default'].createElement(Dropdown, { key: social.label, position: "top", target: React__default['default'].createElement(Icon, __assign({}, iconProps, { mr: mr })) }, 
+                    //@ts-ignore
+                    social.items.map(function (item) { return (React__default['default'].createElement(Link, { external: true, key: item.label, href: item.href, "aria-label": item.label, color: "textSubtle" }, //@ts-ignore
+                    item.label)); })));
                 }
                 return (React__default['default'].createElement(Link, { external: true, key: social.label, href: social.href, "aria-label": social.label, mr: mr },
                     React__default['default'].createElement(Icon, __assign({}, iconProps))));
@@ -2366,7 +2360,7 @@ var WalletCard = function (_a) {
             window.localStorage.setItem(localStorageKey, "1");
             onDismiss();
         }, style: { justifyContent: "space-between" }, mb: mb, id: "wallet-connect-" + title.toLocaleLowerCase() },
-        React__default['default'].createElement(Text, { bold: true, color: "primary", mr: "16px" }, title),
+        React__default['default'].createElement(Text, { bold: true, color: "text", mr: "16px" }, title),
         React__default['default'].createElement(Icon, { width: "32px" })));
 };
 

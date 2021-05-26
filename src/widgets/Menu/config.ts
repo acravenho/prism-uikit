@@ -69,16 +69,6 @@ export const socials = [
   {
     label: "Telegram",
     icon: "TelegramIcon",
-    items: [
-      {
-        label: "English",
-        href: "https://t.me/VikingSwapOfficial",
-      },
-      {
-        label: "Announcements",
-        href: "https://t.me/vikingswapannouncements",
-      },
-    ],
   },
   {
     label: "Twitter",

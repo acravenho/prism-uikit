@@ -91,12 +91,17 @@ const PanelFooter: React.FC<Props> = ({
             const Icon = Icons[social.icon];
             const iconProps = { width: "24px", color: "textSubtle", style: { cursor: "pointer" } };
             const mr = index < socials.length - 1 ? "24px" : 0;
+            //@ts-ignore
             if (social.items) {
               return (
                 <Dropdown key={social.label} position="top" target={<Icon {...iconProps} mr={mr} />}>
-                  {social.items.map((item) => (
+                  {
+                    //@ts-ignore
+                    social.items.map((item) => (
                     <Link external key={item.label} href={item.href} aria-label={item.label} color="textSubtle">
-                      {item.label}
+                      {//@ts-ignore
+                        item.label
+                      }
                     </Link>
                   ))}
                 </Dropdown>
