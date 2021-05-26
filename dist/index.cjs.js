@@ -1727,12 +1727,9 @@ var useParticleBurst = function (options) {
     return { initialize: initialize, teardown: teardown };
 };
 
-var StyledModal = styled__default['default'].div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 32px;\n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"], ["\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border: 1px solid ", ";\n  border-radius: 32px;\n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"])), function (_a) {
+var StyledModal = styled__default['default'].div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border-radius: 32px;\n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"], ["\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n  border-radius: 32px;\n  width: 100%;\n  z-index: ", ";\n  overflow-y: auto;\n  ", " {\n    width: auto;\n    min-width: 360px;\n    max-width: 100%;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.modal.background;
-}, function (_a) {
-    var theme = _a.theme;
-    return theme.colors.borderColor;
 }, function (_a) {
     var theme = _a.theme;
     return theme.zIndices.modal;
@@ -2364,7 +2361,7 @@ var localStorageKey = "accountStatus";
 var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss, mb = _a.mb;
     var title = walletConfig.title, Icon = walletConfig.icon;
-    return (React__default['default'].createElement(Button, { fullWidth: true, onClick: function () {
+    return (React__default['default'].createElement(Button, { fullWidth: true, variant: "tertiary", onClick: function () {
             login(walletConfig.connectorId);
             window.localStorage.setItem(localStorageKey, "1");
             onDismiss();
@@ -2699,14 +2696,14 @@ var light$1 = (_a$2 = {},
         color: lightColors.primary,
     },
     _a$2[TERTIARY] = {
-        background: lightColors.tertiary,
+        background: lightColors.card,
         backgroundActive: lightColors.tertiary,
         backgroundHover: lightColors.tertiary,
         border: 0,
         borderColorHover: "currentColor",
         boxShadow: "none",
         boxShadowActive: "none",
-        color: lightColors.primary,
+        color: lightColors.text,
     },
     _a$2[TEXT] = {
         background: "transparent",

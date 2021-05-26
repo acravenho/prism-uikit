@@ -25,14 +25,14 @@ export const light: ButtonTheme = {
     color: lightColors.primary,
   },
   [TERTIARY]: {
-    background: lightColors.tertiary,
+    background: lightColors.card,
     backgroundActive: lightColors.tertiary,
     backgroundHover: lightColors.tertiary,
     border: 0,
     borderColorHover: "currentColor",
     boxShadow: "none",
     boxShadowActive: "none",
-    color: lightColors.primary,
+    color: lightColors.text,
   },
   [TEXT]: {
     background: "transparent",
