@@ -2048,11 +2048,12 @@ var socials = [
     {
         label: "Telegram",
         icon: "TelegramIcon",
+        href: "https://t.me/PrismFinance",
     },
     {
         label: "Twitter",
         icon: "TwitterIcon",
-        href: "https://twitter.com/vikingswap",
+        href: "https://twitter.com/prism_finance",
     },
 ];
 var MENU_HEIGHT = 64;
