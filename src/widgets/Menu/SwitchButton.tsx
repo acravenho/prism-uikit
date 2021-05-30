@@ -14,6 +14,13 @@ const SwitchButtonStyled = styled(Button)`
   background-color: transparent;
   border: 1px solid #fff;
   margin-right: 10px;
+  vertical-align: sub;
+
+  &.bsc {
+    &:hover {
+      background-color: #F0B90B;
+    }
+  }
 
   .text {
     display: none;
@@ -44,7 +51,7 @@ const SwitchButton: React.FC<Props> = ({to}) => {
 
   return (
     <a href={goToUrl()}>
-      <SwitchButtonStyled>
+      <SwitchButtonStyled className={to}>
         {
           to === 'polygon' &&
           <>
