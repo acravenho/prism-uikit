@@ -37,6 +37,7 @@ it("renders correctly", () => {
         currentLang="EN"
         cakePriceUsd={0.23158668932877668}
         links={menuConfig}
+        to="polygon"
       >
         body
       </Menu>

@@ -32,6 +32,7 @@ export const Connected: React.FC = () => {
         cakePriceUsd={0.23158668932877668}
         links={links}
         profile={null}
+        to="polygon"
       >
         <div>
           <Heading as="h1" mb="8px">
@@ -69,6 +70,7 @@ export const NotConnected: React.FC = () => {
         setLang={noop}
         currentLang="EN"
         links={links}
+        to="polygon"
       >
         <div>
           <h1>Page body</h1>
@@ -105,6 +107,7 @@ export const WithNoProfile: React.FC = () => {
           profileLink: "/profile",
           noProfileLink: "/no-profile",
         }}
+        to="polygon"
       >
         <div>
           <Heading as="h1" mb="8px">
@@ -149,6 +152,7 @@ export const WithProfile: React.FC = () => {
           profileLink: "/profile",
           noProfileLink: "/no-profile",
         }}
+        to="polygon"
       >
         <div>
           <Heading as="h1" mb="8px">
