@@ -17,8 +17,8 @@ const SwitchButtonStyled = styled(Button)`
   vertical-align: sub;
 
   &.bsc {
-    &:hover {
-      background-color: #F0B90B !important;
+    &:hover:not(:disabled):not(.button--disabled):not(:active) {
+      background-color: #F0B90B;
     }
   }
 
