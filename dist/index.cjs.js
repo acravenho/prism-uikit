@@ -2430,7 +2430,7 @@ var useWalletModal = function (login, logout, account) {
     return { onPresentConnectModal: onPresentConnectModal, onPresentAccountModal: onPresentAccountModal };
 };
 
-var SwitchButtonStyled = styled__default['default'](Button)(templateObject_1$G || (templateObject_1$G = __makeTemplateObject(["\n  padding: 15px;\n  height: 30px;\n  margin-left: auto;\n  margin-right: auto;\n  background-color: transparent;\n  border: 1px solid #fff;\n  margin-right: 10px;\n\n  .text {\n    display: none;\n  }\n\n  @media(min-width:600px) {\n    padding: 15px 20px;\n\n    svg {\n      padding-right: 10px;\n    }\n\n    .text {\n      display: block;\n    }\n\n  }\n"], ["\n  padding: 15px;\n  height: 30px;\n  margin-left: auto;\n  margin-right: auto;\n  background-color: transparent;\n  border: 1px solid #fff;\n  margin-right: 10px;\n\n  .text {\n    display: none;\n  }\n\n  @media(min-width:600px) {\n    padding: 15px 20px;\n\n    svg {\n      padding-right: 10px;\n    }\n\n    .text {\n      display: block;\n    }\n\n  }\n"])));
+var SwitchButtonStyled = styled__default['default'](Button)(templateObject_1$G || (templateObject_1$G = __makeTemplateObject(["\n  padding: 15px;\n  height: 30px;\n  margin-left: auto;\n  margin-right: auto;\n  background-color: transparent;\n  border: 1px solid #fff;\n  margin-right: 10px;\n  vertical-align: sub;\n\n  &.bsc {\n    &:hover {\n      background-color: #F0B90B;\n    }\n  }\n\n  .text {\n    display: none;\n  }\n\n  @media(min-width:600px) {\n    padding: 15px 20px;\n\n    svg {\n      padding-right: 10px;\n    }\n\n    .text {\n      display: block;\n    }\n\n  }\n"], ["\n  padding: 15px;\n  height: 30px;\n  margin-left: auto;\n  margin-right: auto;\n  background-color: transparent;\n  border: 1px solid #fff;\n  margin-right: 10px;\n  vertical-align: sub;\n\n  &.bsc {\n    &:hover {\n      background-color: #F0B90B;\n    }\n  }\n\n  .text {\n    display: none;\n  }\n\n  @media(min-width:600px) {\n    padding: 15px 20px;\n\n    svg {\n      padding-right: 10px;\n    }\n\n    .text {\n      display: block;\n    }\n\n  }\n"])));
 var SwitchButton = function (_a) {
     var to = _a.to;
     var goToUrl = function () {
@@ -2440,7 +2440,7 @@ var SwitchButton = function (_a) {
         return "https://bsc.prismfinance.net";
     };
     return (React__default['default'].createElement("a", { href: goToUrl() },
-        React__default['default'].createElement(SwitchButtonStyled, null,
+        React__default['default'].createElement(SwitchButtonStyled, { className: to },
             to === 'polygon' &&
                 React__default['default'].createElement(React__default['default'].Fragment, null,
                     React__default['default'].createElement("svg", { height: "20px", version: "1.1", id: "Layer_1", xmlns: "http://www.w3.org/2000/svg", xmlnsXlink: "http://www.w3.org/1999/xlink", x: "0px", y: "0px", viewBox: "0 0 38.4 33.5", xmlSpace: "preserve", fill: "#ffffff" },
