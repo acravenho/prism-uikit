@@ -18,7 +18,7 @@ const SwitchButtonStyled = styled(Button)`
 
   &.bsc {
     &:hover {
-      background-color: #F0B90B;
+      background-color: #F0B90B !important;
     }
   }
 
